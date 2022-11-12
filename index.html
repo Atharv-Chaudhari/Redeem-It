@@ -84,21 +84,21 @@
     </style>
     <script>
         function code_redeem(){
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", "https://lordsmobile.igg.com/project/gifts/ajax.php?game_id=1051029902", true);
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.send(JSON.stringify({
-                    'ac': 'get_gifts',
-                    'type':'0',
-                    'iggid': '124343',
-                    'charname': '',
-                    'cdkey': 'sdgdfh',
-                    'lang': 'en'
-                }));
-                xhr.onload = function() {
-                    var data = JSON.parse(this.responseText);
-                    console.log(data);
-                };
+                $.ajax({
+                      url: "https://lordsmobile.igg.com/project/gifts/ajax.php?game_id=1051029902n",
+                      type: 'POST',
+                      dataType: 'jsonp',
+                      cors: true ,
+                      contentType:'application/json',
+                      secure: true,
+                      headers: {
+                        'Access-Control-Allow-Origin': '*',
+                      },
+                      success: function (data){
+                        console.log(data);
+                          alert(data);
+                      }
+                  })
         }
     </script>
 </head>
