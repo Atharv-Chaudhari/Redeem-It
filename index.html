@@ -85,14 +85,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
         function code_redeem(){
-               const Http = new XMLHttpRequest();
-const url='https://jsonplaceholder.typicode.com/posts';
-Http.open("GET", url);
-Http.send();
-
-Http.onreadystatechange = (e) => {
-  console.log(Http.responseText)
-}
+              const Url='https://jsonplaceholder.typicode.com/posts/';
+                const data={
+                name: "Said",
+                id:23
+                }
+                $('.btn').click(function(){
+                $.post(Url, data, function(data, status){ console.log(${data} and status is ${status}')
+                });
+                })
         }
     </script>
 </head>
