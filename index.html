@@ -90,8 +90,9 @@
                     id:23
                 }
                 $('.btn').click(function(){
-                    $.post(Url, data, function(data, status){ console.log(${data} and status is ${status}')
-                });
+                    $.post(Url, data, function(data, status){ 
+                        console.log(${data} and status is ${status}')
+                    });
                 })
    
     </script>
@@ -102,7 +103,7 @@
         <div class="container__item">
             <form class="form">
                 <input type="email" class="form__field" placeholder="Enter Gift Code" />
-                <button type="button" class="btn btn--primary btn--inside uppercase" onclick="code_redeem()">Redeem</button>
+                <button type="button" class="btn btn--primary btn--inside uppercase">Redeem</button>
             </form>
         </div>
     </div>
