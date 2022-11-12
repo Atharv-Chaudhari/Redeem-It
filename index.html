@@ -85,21 +85,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
         function code_redeem(){
-                $.ajax({
-                      url: "https://lordsmobile.igg.com/project/gifts/ajax.php?game_id=1051029902n",
-                      type: 'POST',
-                      dataType: 'jsonp',
-                      cors: true ,
-                      contentType:'application/json',
-                      secure: true,
-                      headers: {
-                        'Access-Control-Allow-Origin': '*',
-                      },
-                      success: function (data){
-                        console.log(data);
-                          alert(data);
-                      }
-                  })
+               const Http = new XMLHttpRequest();
+const url='https://jsonplaceholder.typicode.com/posts';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
         }
     </script>
 </head>
